@@ -22,7 +22,7 @@
                             action="{{ route('tasks.edit', ['folder' => $task->folder_id, 'task' => $task->id]) }}"
                             method="POST"
                         >
-                            @csrf
+                            {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">タイトル</label>
                                 <input type="text" class="form-control" name="title" id="title"

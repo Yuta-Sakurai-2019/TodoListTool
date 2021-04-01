@@ -1,6 +1,5 @@
 @extends('layout')
 
-
 @section('content')
    <div class="container">
        <div class="row">
@@ -18,7 +17,7 @@
                             @endif
                         </div>
                         <form action="{{ route('folders.create') }}" method="post">
-                            @csrf
+                            {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="title">フォルダ名</label>
                                 <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />

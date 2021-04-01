@@ -18,7 +18,7 @@
                 ｜
                 <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
+                    {{ csrf_field() }}
                 </form>
             @else
                 <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>

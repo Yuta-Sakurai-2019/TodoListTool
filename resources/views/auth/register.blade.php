@@ -14,7 +14,7 @@
                             </div>
                         @endif
                         <form action="{{ route('register') }}" method="POST">
-                            @csrf
+                            {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="email">メールアドレス</label>
                                 <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" />
